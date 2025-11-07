@@ -21,7 +21,6 @@ public:
     }
 };
 
-// Derived class (inherits from Person)
 class Student : public Person {
 private:
     int rollNo;

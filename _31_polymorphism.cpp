@@ -31,6 +31,7 @@ public:
 class circle : public shape {
 public:
     void area() override {
+        shape::area();
         float r;
         cout << "Enter radius of circle: ";
         cin >> r;
@@ -45,7 +46,9 @@ int main() {
     m.add(12, 12, 12);
 
     cout << "\n=== Runtime Polymorphism ===" << endl;
-    shape *s; 
+    shape base;
+    base.area();
+    shape *s;
     square sq;
     circle c;
 
@@ -54,6 +57,7 @@ int main() {
 
     s = &c;
     s->area();
+
 
     return 0;
 }

@@ -25,7 +25,7 @@ class demo{
 int main(){
     demo d1(12,23);
     demo d2(23,12);
-    demo d3 = d1 + d2;
+    demo d3(d1 + d2);
     d3.display();
     return 0;
 }
